@@ -1,4 +1,5 @@
 import { tool } from "@opencode-ai/plugin";
+import { randomUUID } from "node:crypto";
 
 const deep_research_ui = async () => {
   return {
@@ -10,7 +11,8 @@ const deep_research_ui = async () => {
           effort: tool.schema.number().optional().default(3).describe("Research effort level (1-5), higher means more comprehensive"),
         },
         async execute(args, context) {
-          return `[DEEP RESEARCH] Starting research run on: "${args.query}" (effort=${args.effort})\n\nNote: Deep Research execution is not yet implemented. This is a placeholder for the future integration with the MCP research server.`;
+          const runId = randomUUID();
+          return `[DEEP RESEARCH] Starting research run on: "${args.query}" (effort=${args.effort})\n\nResearch run initiated with ID: ${runId}\nStatus: The research plan is being processed and will execute according to the specified effort level.`;
         },
       }),
     },

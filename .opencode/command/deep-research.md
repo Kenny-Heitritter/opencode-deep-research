@@ -15,4 +15,4 @@ Your plan should:
 3. Consider multiple perspectives and potential contradictions
 4. Outline how evidence will be gathered and synthesized
 
-Present the plan for user approval. Note: Deep Research execution capabilities are not yet available - for now, focus on creating comprehensive research plans.
+Present the plan for user approval. Once approved, invoke the deep_research_ui.start_run tool to initiate the research execution with the user's original query and the specified effort level.

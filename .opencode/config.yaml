@@ -25,8 +25,7 @@ agent:
          - Sources to consult
          - Expected deliverables
       4. Get user approval on the plan.
-
-      Once the plan is approved, you can use the deep_research_ui.start_run tool to execute the deep research with the approved query and effort level (1-5, where higher means more thorough research).
+      5. Once approved, use the deep_research_ui.start_run tool to execute the deep research with the approved query and effort level (1-5, where higher means more thorough research).
     maxSteps: 10
     permission:
       bash: deny

@@ -26,7 +26,11 @@ agent:
          - Expected deliverables
       4. Get user approval on the plan.
 
-      Note: The Deep Research execution tool is not yet available. For now, focus on clarifying queries and creating research plans.
+      The deep_research_ui.start_run tool creates a unique run ID and returns the research state.
+      Possible states:
+      - awaiting_clarification: Run waiting for user to answer clarifying questions
+      - awaiting_approval: Run waiting for user to approve the execution plan
+      - ready_to_execute: Run ready to be executed
     maxSteps: 10
     permission:
       bash: deny

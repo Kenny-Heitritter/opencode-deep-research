@@ -1,0 +1,1 @@
+export { DeepResearchUIPlugin } from "./plugin.js";

@@ -1,5 +1,4 @@
 import { Plugin, tool } from "@opencode-ai/plugin";
-import { z } from "zod";
 
 const deepResearchTool = tool({
   description: "Deep Research UI for planning and executing research tasks",

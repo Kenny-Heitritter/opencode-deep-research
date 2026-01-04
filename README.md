@@ -26,7 +26,6 @@ See [SPEC.md](SPEC.md) for the full specification and architecture overview.
 
 Install Python dependencies:
 ```bash
-cd /app/.swarm/worktrees/opencode-deep-research-77533cee/worker-4
 pip install -e .
 ```
 

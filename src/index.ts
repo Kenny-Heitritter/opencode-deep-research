@@ -15,12 +15,7 @@ const deepResearchTool = tool({
   },
   async execute(args, context) {
     const runId = crypto.randomUUID();
-    
-    console.log(`Starting deep research run: ${runId}`);
-    console.log(`Query: ${args.query}`);
-    console.log(`Effort level: ${args.effort}`);
-    console.log(`Session ID: ${context.sessionID}`);
-    
+
     return JSON.stringify({
       status: "initialized",
       run_id: runId,

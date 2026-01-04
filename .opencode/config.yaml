@@ -33,3 +33,5 @@ agent:
       edit: deny
       webfetch: deny
       external_directory: deny
+    tools:
+      - deep_research_ui.start_run

@@ -45,6 +45,7 @@ htmlcov/
 # OS
 .DS_Store
 
-# OpenCode (ignore everything except agent configs)
+# OpenCode (ignore everything except agent and command configs)
 .opencode/*
 !.opencode/agents/
+!.opencode/command/

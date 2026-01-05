@@ -1,0 +1,52 @@
+{
+  "run_id": "test-run-123",
+  "plan": "Test plan",
+  "effort": 3,
+  "status": "completed",
+  "query": "test query",
+  "search_results": [
+    {
+      "url": "https://example.com/1",
+      "title": "Test Result 1",
+      "snippet": "Test snippet",
+      "relevance_score": 0.9
+    },
+    {
+      "url": "https://example.com/2",
+      "title": "Test Result 2",
+      "snippet": "Another snippet",
+      "relevance_score": 0.8
+    }
+  ],
+  "documents": [
+    {
+      "url": "https://example.com/1",
+      "title": "Document 1",
+      "content": "Content from first document"
+    },
+    {
+      "url": "https://example.com/2",
+      "title": "Document 2",
+      "content": "Content from second document"
+    }
+  ],
+  "notes": [
+    {
+      "extract_query": "test query",
+      "content": "First important finding",
+      "source_url": "https://example.com/1",
+      "span_start": null,
+      "span_end": null,
+      "relevance_score": null
+    },
+    {
+      "extract_query": "test query",
+      "content": "Second important finding",
+      "source_url": "https://example.com/2",
+      "span_start": null,
+      "span_end": null,
+      "relevance_score": null
+    }
+  ],
+  "errors": []
+}

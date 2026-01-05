@@ -3,7 +3,7 @@
 from typing import List, Dict, Set, Optional
 import logging
 
-from ..models import DraftAST, Note, SectionNode, ParagraphNode
+from ..models import DraftAST, DraftNote, SectionNode, ParagraphNode
 
 
 logger = logging.getLogger(__name__)
@@ -36,7 +36,7 @@ class Renderer:
 
         return "\n".join(lines)
 
-    def render_references(self, notes: List[Note]) -> str:
+    def render_references(self, notes: List[DraftNote]) -> str:
         """
         Render references section for a list of notes.
 
@@ -148,7 +148,7 @@ class Renderer:
 
         return "\n".join(lines)
 
-    def render_contradictions_section(self, notes: List[Note]) -> str:
+    def render_contradictions_section(self, notes: List[DraftNote]) -> str:
         """
         Render a contradictions and uncertainties section.
 

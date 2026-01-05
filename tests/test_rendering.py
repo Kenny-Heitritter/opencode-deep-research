@@ -12,7 +12,7 @@ from src.models import (
     Section,
     Paragraph,
     DraftAST,
-    Note,
+    DraftNote,
     SectionNode,
     ParagraphNode,
     EffortLevel,
@@ -28,7 +28,7 @@ def test_basic_citation_rendering():
 
     draft_ast = DraftAST(draft_id="draft-1")
 
-    note1 = Note(
+    note1 = DraftNote(
         id="note-1",
         type=NoteType.CITATION,
         content="Example finding from research",
@@ -36,7 +36,7 @@ def test_basic_citation_rendering():
         source_url="https://example.com/paper",
     )
 
-    note2 = Note(
+    note2 = DraftNote(
         id="note-2",
         type=NoteType.EVIDENCE,
         content="Supporting evidence from another source",
@@ -84,7 +84,7 @@ def test_nested_sections():
 
     draft_ast = DraftAST(draft_id="draft-2")
 
-    note1 = Note(
+    note1 = DraftNote(
         id="note-1",
         type=NoteType.CITATION,
         content="First source",
@@ -152,7 +152,7 @@ def test_references_section():
     print("Testing references section rendering...")
 
     notes = [
-        Note(
+        DraftNote(
             id="note-1",
             type=NoteType.CITATION,
             content="Content",
@@ -161,7 +161,7 @@ def test_references_section():
             author="Author A",
             date="2024",
         ),
-        Note(
+        DraftNote(
             id="note-2",
             type=NoteType.CITATION,
             content="Content",
@@ -262,7 +262,7 @@ def test_draft_ast_note_binding():
 
     draft_ast = DraftAST(draft_id="draft-4")
 
-    note = Note(
+    note = DraftNote(
         id="note-1",
         type=NoteType.EVIDENCE,
         content="Important evidence",
@@ -305,7 +305,7 @@ def test_full_integration():
 
         draft_ast = DraftAST(draft_id="draft-1")
 
-        note1 = Note(
+        note1 = DraftNote(
             id="note-1",
             type=NoteType.CITATION,
             content="Citation content",

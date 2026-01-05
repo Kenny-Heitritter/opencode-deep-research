@@ -48,4 +48,6 @@ htmlcov/
 # OpenCode (ignore everything except agent and command configs)
 .opencode/*
 !.opencode/agents/
+!.opencode/agents/deep-research-intake/
 !.opencode/command/
+!.opencode/commands/

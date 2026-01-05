@@ -72,3 +72,42 @@ class DraftAST:
     references: list[tuple[int, str, str]] = field(default_factory=list)
     contradictions: list[str] = field(default_factory=list)
     uncertainties: list[str] = field(default_factory=list)
+
+
+@dataclass
+class Claim:
+    """A claim made in research that needs verification."""
+
+    text: str
+    citation_indices: list[int] = field(default_factory=list)
+    strength_score: float = 0.0
+    needs_verification: bool = False
+
+
+@dataclass
+class Conflict:
+    """A contradiction detected between sources."""
+
+    description: str
+    conflicting_notes: list[Note]
+    severity: str = "medium"
+
+
+@dataclass
+class Query:
+    """A follow-up query for further research."""
+
+    text: str
+    reason: str
+    priority: str = "medium"
+
+
+@dataclass
+class PartialRun:
+    """Partial results from a cancelled research run."""
+
+    run_id: str
+    status: str = "cancelled"
+    completed_sections: list[DraftSection] = field(default_factory=list)
+    citations_collected: list[tuple[int, str, str]] = field(default_factory=list)
+    notes: list[Note] = field(default_factory=list)
